@@ -11,7 +11,17 @@
     "esModuleInterop": true,
     "lib": ["ESNext", "DOM"],
     "skipLibCheck": true,
-    "noEmit": true
+    "noEmit": true,
+    "types": [
+      /** ant-design-vue 的 Volar 插件支持 */
+      "ant-design-vue/typings/global"
+    ],
+     /** baseUrl 用来告诉编译器到哪里去查找模块，使用非相对模块时必须配置此项 */
+     "baseUrl": ".",
+     /** 非相对模块导入的路径映射配置，根据 baseUrl 配置进行路径计算 */
+     "paths": {
+       "@/*": ["src/*"]
+     }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
   "references": [{ "path": "./tsconfig.node.json" }]

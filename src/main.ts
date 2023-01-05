@@ -1,5 +1,11 @@
 import { createApp } from 'vue'
-import './style.css'
+import loadPlugins from '@/plugins'
 import App from './App.vue'
 
-createApp(App).mount('#app')
+import 'ant-design-vue/dist/antd.css'
+import './style.css'
+
+const app = createApp(App)
+loadPlugins(app)
+
+app.mount('#app')
